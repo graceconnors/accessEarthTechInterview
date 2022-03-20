@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataserviceService } from '../../../dataservice.service'
 
 @Component({
   selector: 'app-trash',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrashPage implements OnInit {
 
-  constructor() { }
+  emails = [];
+
+  constructor(public dataservice: DataserviceService) { }
 
   ngOnInit() {
+    this.emails = this.dataservice.getDeletedEmails();
   }
+
 
 }

@@ -1,9 +1,16 @@
 <ion-header>
     <ion-toolbar>
         <ion-title>Trash</ion-title>
+
+        
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+    <ion-list>
+        <ion-item *ngFor="let e of emails">
+            {{e}}
+        </ion-item>
+    </ion-list>
 </ion-content>
