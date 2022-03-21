@@ -28,4 +28,8 @@ export class DataserviceService {
     this.deletedEmails.push(this.emails[i]);
     this.emails.splice(i, 1);
   }
+
+  insertEmail(email) {
+    this.emails.push(email);
+  }
 }

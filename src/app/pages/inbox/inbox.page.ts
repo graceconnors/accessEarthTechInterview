@@ -41,7 +41,9 @@ export class InboxPage implements OnInit {
           text: 'submit',
           handler: (data) => { 
             console.log('Email added');
-            this.emails.push(data.email);
+            // this.emails.push(data.email);
+            this.dataservice.insertEmail(data.email);
+            console.log("added");
           }
         }
       ]
